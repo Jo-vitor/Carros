@@ -1,8 +1,7 @@
 from flask import Flask, make_response, jsonify, request 
 import mysql.connector
-import os
 
-conexao = mysql.connector.connect(host="localhost", database="PythonSQL", user="root", password="123456") 
+conexao = mysql.connector.connect(host="0.0.0.0", database="PythonSQL", user="root", password="123456") 
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False 
