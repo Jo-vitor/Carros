@@ -1,5 +1,6 @@
 from flask import Flask, make_response, jsonify, request 
 import mysql.connector
+import os
 
 conexao = mysql.connector.connect(host="localhost", database="PythonSQL", user="root", password="123456") 
 
@@ -87,4 +88,4 @@ def delete_car(id):
         jsonify( mensagem = "Carro deletado" )
     )
 
-app.run()
+app.run(debug=True, port=os.getenv("PORT", default=5000))
