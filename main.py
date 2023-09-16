@@ -88,4 +88,4 @@ def delete_car(id):
         jsonify( mensagem = "Carro deletado" )
     )
 
-app.run(debug=True, port=os.getenv("PORT", default=5000))
+app.run()
